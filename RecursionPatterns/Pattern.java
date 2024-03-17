@@ -1,14 +1,14 @@
 package RecursionPatterns;
 
+import java.util.Arrays;
+
 public class Pattern {
     public static void main(String[] args) {
         int[] arr = {4,3,2,1};
         int r = arr.length - 1;
         int c = 0;
         bubbleSort(arr, r, c);
-        for(int i=0;i<arr.length;i++){
-            System.out.println(arr[i]);
-        }
+        System.out.println(Arrays.toString(arr));
         printPattern(4);
         printPattern2(4, 0);
         printPattern3(4, 0);
@@ -49,6 +49,7 @@ public class Pattern {
             System.out.println();
         }
     }
+    //bubble sort has the same logic
     static void bubbleSort(int[] arr, int r, int c){
         if(r == 0){
             return;
