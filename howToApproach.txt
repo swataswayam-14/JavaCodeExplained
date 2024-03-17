@@ -1,0 +1,27 @@
+1.identify how you can break the problem into smaller problem
+2.write the recurrence relation if needed
+3.draw the recursive tree 
+4.about the tree:
+    (i)-> see the flow of functions , how they are getting in stack
+    (ii)-> identify and focus on left tree calls and right tree calls
+    (iii)-> draw the tree and pointers again and again
+    (iv)-> use debugger to see the flow
+5. See how the and what type of values are returned at each step
+6. See where the function call come out. In the end ,you will come out of the main function
+
+
+Variables : 
+1. Arguments (will go in the next function call)
+2. Return type
+3. Body of the function (specific to that call and not required for future function calls)
+4. Make sure to return the result of a function call , if there is a return type
+
+Binary search : 
+1. comparing O(1)
+2. Dividing into 2 half 
+
+F(n) = O(1) (comparision) + F(n/2) (dividing in half) -> recurrence relation
+types of recurrence relation:->
+1. Linear recurrence relation (fibonacci)
+2. divide and conquer recurrence relation (Binary search)
+
