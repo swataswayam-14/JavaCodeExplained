@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int [] arr = {5,6,3,1,2,9};
-        int r = arr.length-1;
+        int r = arr.length;
         // ssSort(arr, r);
         System.out.println(Arrays.toString(arr));
-        ssSortRec(arr, arr.length, 0, 0);
+        ssSortRec(arr,r, 0, 0);
         System.out.println(Arrays.toString(arr));
     }
     static int max = 9;
