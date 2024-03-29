@@ -4,7 +4,8 @@ import java.util.*;
 public class FindFirstAndLastPositionOfElementInSortedArray {
     public static void main(String[] args) {
         int [] nums = {1,2,3,3,3,3,4,4,5};
-        System.out.println(Arrays.toString(searchRangelinear(nums, 5)));
+        System.out.println(Arrays.toString(searchRangelinear(nums, 6)));
+        System.out.println(Arrays.toString(searchRange(nums, 6)));
     }
 
 
@@ -25,9 +26,9 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         }
         int k = 0;
         if(size < 1){
-            size = 0;
-            int[] arr = new int[1];
+            int[] arr = new int[2];
             arr[0] = -1;
+            arr[1] = -1;
             return arr;
         }else{
             for (int i = index; i < nums.length; i++) {
@@ -58,5 +59,36 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
             }
         }
     } 
-    //Brute Force approach : start searching from the first index and start searching from last - O(n) complexity
+    //Brute Force approach 2 : start searching from the first index and start searching from last - O(n) complexity
+
+    static int[] searchRange(int[] nums , int target){
+        int[] ans = {-1, -1};
+        int start = findIndex(nums, target, true);
+        int end = findIndex(nums, target, false);
+        ans[0] = start;
+        ans[1] = end;
+        return ans;
+    }
+
+    static int findIndex(int [] nums , int target , boolean isFirst){
+        int start = 0;
+        int ans = -1;
+        int end = nums.length-1;
+        while (start <= end) {
+            int mid = start + (end-start)/2;
+            if(target < nums[mid]){
+                end = mid-1;
+            }else if(target > nums[mid]){
+                start = mid + 1;
+            }else{
+                ans = mid;
+                if(isFirst){
+                    end = mid-1;
+                }else{
+                    start = mid+1;
+                }
+            }
+        }
+        return ans;
+    }
 }
