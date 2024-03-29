@@ -4,7 +4,7 @@ import java.util.*;
 public class FindFirstAndLastPositionOfElementInSortedArray {
     public static void main(String[] args) {
         int [] nums = {1,2,3,3,3,3,4,4,5};
-        System.out.println(Arrays.toString(searchRangelinear(nums, 2)));
+        System.out.println(Arrays.toString(searchRangelinear(nums, 5)));
     }
 
 
@@ -23,25 +23,40 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
                 occurence++; //the target has been found once (first occurence) 
             }
         }
-        for (int i = index; i < nums.length; i++) {
-            if(target != nums[i] && target == nums[i-1]){ //1,2,3,3,4
-                range[i-1] = i-1; 
-            }
-        }
-        if(size > 1){
-            size = 2;
-        }else{
-            size = 1;
-        }
-        int[] ans = new int[size];
         int k = 0;
-        for (int i = 0; i < range.length; i++) {
-            if(range[i] != 0){
-                ans[k] = range[i];
-                k++;
+        if(size < 1){
+            size = 0;
+            int[] arr = new int[1];
+            arr[0] = -1;
+            return arr;
+        }else{
+            for (int i = index; i < nums.length; i++) {
+                if(target != nums[i] && target == nums[i-1]){ //1,2,3,3,4
+                    range[i-1] = i-1; 
+                }
+            }
+            if(size > 1){
+                size = 2;
+                int[] ans = new int[size];
+                for (int i = 0; i < range.length; i++) {
+                    if(range[i] != 0){
+                        ans[k] = range[i];
+                        k++;
+                    }
+                }
+                return ans;
+            }else{
+                size = 1;
+                int[] ans = new int[size];
+                for (int i = 0; i < range.length; i++) {
+                    if(range[i] != 0){
+                        ans[k] = range[i];
+                        k++;
+                    }
+                }
+                return ans;
             }
         }
-        return ans;
     } 
-    
+    //Brute Force approach : start searching from the first index and start searching from last - O(n) complexity
 }
