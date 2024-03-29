@@ -5,6 +5,7 @@ public class PeakIndexInAMountainArray {
         int[] arr = {1,2,3,4,6,4,3,2,1};
         System.out.println(peakIndex(arr));
         System.out.println(peakIndexOptimised(arr));
+        System.out.println(peakIndexOptimised2(arr));
     }
 
     static int peakIndex(int[] arr){
@@ -34,5 +35,20 @@ public class PeakIndexInAMountainArray {
             }
         }
         return -1;
+    }
+    static int peakIndexOptimised2(int[] arr){
+        int start = 0;
+        int end = arr.length -1;
+        while(start < end){
+            int mid = start + (end-start)/2;
+            if(arr[mid] > arr[mid+1]){
+                //we are in the descending part of the array
+                //search in the left
+                end = mid;
+            }else{
+                start = mid+1;
+            }
+        }
+        return start; //or end
     }
 }
