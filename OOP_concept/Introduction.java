@@ -17,17 +17,21 @@ public class Introduction {
         Student student1 = new Student(); //dynamically allocates memory and returns a reference to it
         System.out.println(Arrays.toString(students));
         System.out.println(student1.marks);
+        System.out.println(student1.roll);
 
         student1.roll = 34;
         student1.name= "swayam";
         student1.marks = 324;
+        System.out.println(student1.roll);
+
+
     }
  
 
 }
 
 class Student{
-    int roll;
+    int roll = 90;
     String name;
     float marks;
 }
