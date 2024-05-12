@@ -11,6 +11,9 @@ public class Constructor {
 
         Student1 random = new Student1(subham);
         random.display();
+
+        Student2 mayank = new Student2();
+        System.out.println(mayank.name);
     }
 }
 
@@ -49,5 +52,18 @@ class Student1{
         this.name = other.name;
         this.roll = other.roll;
         this.marks = other.marks;
+    }
+}
+
+
+class Student2{
+    String name;
+    float height;
+    Student2(){
+        this("Steguf Billu", 156.4f);
+    }
+    Student2(String name , float height){
+        this.name = name;
+        this.height = height;
     }
 }
