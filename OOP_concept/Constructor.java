@@ -8,6 +8,9 @@ public class Constructor {
 
         Student1 subham = new Student1("Subham", 12, 32.32);
         subham.display();
+
+        Student1 random = new Student1(subham);
+        random.display();
     }
 }
 
@@ -32,10 +35,19 @@ class Student1{
         this.roll = 13;
         this.name= "swayam";
         this.marks = 86.4f;
-    }
+    }//Constructor Overloading
+
+    //Student1 mahaRishi = new Student1("maha", 123, 134.24)
+    //here this will be replaced by "mahaRishi"
     Student1(String name, int roll , double marks){
         this.name= name;
         this.roll = roll;
         this.marks = marks;
+    }
+
+    Student1(Student1 other){
+        this.name = other.name;
+        this.roll = other.roll;
+        this.marks = other.marks;
     }
 }
