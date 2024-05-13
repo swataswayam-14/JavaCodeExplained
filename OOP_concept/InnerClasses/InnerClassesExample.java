@@ -26,6 +26,8 @@ public class InnerClassesExample {
         Test S = new Test("hello");
         Test M = new Test("good bye");
 
+        System.out.println(S);
+
         System.out.println(Test.name);
         System.out.println(Test.name);
 
@@ -42,6 +44,12 @@ class Test{
     static String name;
     public Test(String name){
         Test.name = name;
+    }
+
+    @Override
+
+    public String toString(){
+        return Test.name;
     }
 }
 
