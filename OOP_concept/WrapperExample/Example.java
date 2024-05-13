@@ -62,3 +62,7 @@ class A{
         System.out.println("Object is destroyed");
     }//when any object of class A is destroyed then this method would be called
 }
+
+
+
+//println calls the toString() method for the object that is passed to it , if it didn't find a toString method then it will call a default function that is getClass().getName() + "@" + Integer.toHexString(hashcode())
