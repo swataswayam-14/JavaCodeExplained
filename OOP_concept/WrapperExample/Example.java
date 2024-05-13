@@ -35,6 +35,9 @@ public class Example {
        for (int i = 0; i < 1000000000; i++) {
         object = new A("Billu");
        }
+
+
+       
     }
 
     static void swap(int a , int b){
