@@ -14,6 +14,11 @@ public class Constructor {
 
         Student2 mayank = new Student2();
         System.out.println(mayank.name);
+
+        Student2 one = new Student2();
+        one.name = "Hello somethings";
+        Student2 two = one;
+        System.out.println(two.name);
     }
 }
 
