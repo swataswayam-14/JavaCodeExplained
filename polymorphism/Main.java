@@ -21,6 +21,12 @@ public class Main {
 
         //Parent obj = new Child()
         //here which method will be called depends on Child, this is known as upcasting, and this whole concept is known as Overriding.
+
+
+        //Java achieve this by : Dynamic method dispatch -> mechanism by which the call to an overriden method is resolved at runtime , rather than compile time.
+
+        //Hence this is RunTime polymorphism
+        
     }
     
 }
