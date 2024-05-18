@@ -1,5 +1,7 @@
 package Packages.Swayam.B;
 
+import AccessControl.A;
+
 public class Human{
     String name;
     int age;
@@ -11,4 +13,9 @@ public class Human{
         this.salary = salary;
         Human.population += 1; //to access the static variable we use the class name
     }
+    A a = new A(123, "afa", 123);
+    // String name = a.name;
+    // int num = a.num
+
+    //in different packages we cannot access the data members of the class
 }    
