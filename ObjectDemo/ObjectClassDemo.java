@@ -50,5 +50,9 @@ public class ObjectClassDemo {
         if(obj.equals(obj2)){
             System.out.println("These objects are equal");
         }
+
+
+        System.out.println(obj.getClass()); //getClass method is final , hence we cannot override this
+        System.out.println(obj.getClass().getName());
     }
 }
