@@ -14,5 +14,7 @@ public class Main implements B {
         Main m = new Main();
         m.greet();
         m.fun();
+        m.functionA();
+        m.functionB();
     }
 }
