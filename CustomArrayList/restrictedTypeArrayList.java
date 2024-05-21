@@ -3,6 +3,8 @@ package CustomArrayList;
 public class restrictedTypeArrayList<T extends Number> {
 
     //the type of the arraylist can only be float , integer and double
+
+    //here T should be Number or its subclasses
     private int size = 0;
     private int DEFAULT_SIZE = 10;
     private Object data[];
