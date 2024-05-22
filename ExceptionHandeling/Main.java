@@ -3,10 +3,13 @@ package ExceptionHandeling;
 public class Main {
     public static void main(String[] args) {
         try {
-            int c = divide(4, 0);
-            System.out.println(c);
+            //int c = divide(4, 0);
+            //System.out.println(c);
+            throw new MyException("My exception");
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
+        }catch(MyException e){
+            System.out.println(e);
         }catch(Exception e){
             System.out.println(e);
         }finally{
