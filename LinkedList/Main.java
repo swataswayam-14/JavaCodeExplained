@@ -35,36 +35,50 @@ public class Main {
         // System.out.println(l.getSize());
 
 
-        DLL l = new DLL();
+        // DLL l = new DLL();
 
-        // l.insertFirst(1);
-        // l.insertFirst(2);
-        // l.insertFirst(3);
-        // l.insertFirst(4);
+        // // l.insertFirst(1);
+        // // l.insertFirst(2);
+        // // l.insertFirst(3);
+        // // l.insertFirst(4);
+
+        // // // l.display();
+        // // // l.displayRev();
+
+        // // l.insertLast(12312321);
+        // // l.insertLast(0);
 
         // // l.display();
         // // l.displayRev();
 
-        // l.insertLast(12312321);
-        // l.insertLast(0);
+        //   l.insertLast(2);
+        // //  l.insertLast(3);
+        // //  l.insertLast(4);
+        // try {
+        //     // l.insert(1212, 1);
+        //     // l.insertAfter(1000, 4);
+        //     //System.out.println(l.deleteFirst());
+        //     System.out.println(l.deleteLast());
+        // } catch (Exception e) {
+        //     System.out.println(e.getMessage());
+        // }
+        
 
         // l.display();
-        // l.displayRev();
 
-          l.insertLast(2);
-        //  l.insertLast(3);
-        //  l.insertLast(4);
+        CLL cl = new CLL();
+        cl.insert(1);
+        cl.insert(2);
+        cl.insert(3);
+        cl.insert(5);
+        cl.display();
         try {
-            // l.insert(1212, 1);
-            // l.insertAfter(1000, 4);
-            //System.out.println(l.deleteFirst());
-            System.out.println(l.deleteLast());
+            System.out.println(cl.deleteLast());
+            cl.delete(1);
+            cl.display();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        
-
-        l.display();
         
 
       
