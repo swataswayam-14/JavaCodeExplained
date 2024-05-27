@@ -183,6 +183,9 @@ public class LL {
         }
     }
     public void RemoveDuplicates2(){
+        if(size <= 1){
+            return;
+        }
         Node node = head;
 
         while(node.next!=null){
@@ -196,6 +199,40 @@ public class LL {
         tail = node;
         tail.next = null;
     }
+    //merge two sorted lists
+
+    public static LL merge(LL first , LL second){
+        Node f = first.head;
+        Node s = second.head;
+
+        LL ans = new LL();
+
+        while(f != null && s != null){
+            if(f.val < s.val){
+                ans.insertLast(f.val);
+                f = f.next;
+            }else if(s.val < f.val){
+                ans.insertLast(s.val);
+                s = s.next;
+            }else{
+                ans.insertLast(f.val);
+                ans.insertLast(s.val);
+                s = s.next;
+                f = f.next;
+            }
+        }
+        while(f!=null){
+            ans.insertLast(f.val);
+            f = f.next;
+        }
+        while(s!=null){
+            ans.insertLast(s.val);
+            s = s.next;
+        }
+        return ans;
+    }
+
+
     
     private class Node{
         private int val;

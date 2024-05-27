@@ -1,5 +1,7 @@
 package LinkedList;
 
+import static LinkedList.LL.merge;
+
 public class Main {
     public static void main(String[] args) {
         // LL l = new LL();
@@ -90,11 +92,29 @@ public class Main {
         ll.insertLast(15);
         ll.insertLast(15);
         ll.insertLast(45);
+        System.out.println("first linked list");
         ll.display();
         System.out.println();
-        //ll.RemoveDuplicates();
-        ll.RemoveDuplicates2();
-        ll.display();
+
+        LL ll2 = new LL();
+        ll2.insertLast(6);
+        ll2.insertLast(12);
+        ll2.insertLast(13213);
+        ll2.insertLast(151231);
+        ll2.insertLast(1513232);
+        ll2.insertLast(45231321);
+        System.out.println("second linked list");
+        ll2.display();
+        System.out.println();
+
+
+        System.out.println("Merged linked list");
+        LL newList = new LL();
+        newList = merge(ll2, ll);
+        newList.display();
+        // //ll.RemoveDuplicates();
+        // ll.RemoveDuplicates2();
+        // ll.display();
         
 
       
