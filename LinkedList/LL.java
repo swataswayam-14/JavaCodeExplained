@@ -232,6 +232,35 @@ public class LL {
         return ans;
     }
 
+    public static boolean detectCycle(LL list){
+        if(list.getSize() <= 1){
+            return false;
+        }
+        Node fast = list.head;
+        Node slow = list.head;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == slow){
+                return true;
+            }
+        }
+        return false;
+
+    }
+    public static void createCycle(LL list){
+        if(list.getSize() <= 1){
+            return;
+        }
+        Node temp = list.head;
+        while(temp.next!=null){
+            temp = temp.next;
+        }
+        temp.next = list.head;
+    }
+
 
     
     private class Node{
