@@ -286,7 +286,34 @@ public class LL {
         while(temp.next!=null){
             temp = temp.next;
         }
-        temp.next = list.head;
+        temp.next = list.head.next.next;
+    }
+
+    public static int findStartingIndexOfCycle(LL list){
+        if(list.getSize() <= 1){
+            return -1;
+        }
+        int length = findLengthOfCycle(list);
+        Node f = list.head;
+        Node s = list.head;
+
+        int index = 0;
+        if(detectCycle(list)){
+            while(length > 0){
+                s = s.next;
+                length--;
+            }
+    
+            while(f!=s){
+                index++;
+                f = f.next;
+                s = s.next;
+            }
+    
+            return index;
+        }
+        return -1;
+
     }
 
 

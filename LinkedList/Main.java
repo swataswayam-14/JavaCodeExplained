@@ -3,6 +3,7 @@ package LinkedList;
 import static LinkedList.LL.createCycle;
 import static LinkedList.LL.detectCycle;
 import static LinkedList.LL.findLengthOfCycle;
+import static LinkedList.LL.findStartingIndexOfCycle;
 import static LinkedList.LL.merge;
 
 public class Main {
@@ -124,10 +125,15 @@ public class Main {
         cycle.insertLast(13);
         cycle.insertLast(14);
         cycle.insertLast(15);
+        cycle.insertLast(12);
+        cycle.insertLast(13);
+        cycle.insertLast(14);
+        cycle.insertLast(15);
 
-        createCycle(cycle);
+        //createCycle(cycle);
         System.out.println(detectCycle(cycle));
         System.out.println(findLengthOfCycle(cycle));
+        System.out.println(findStartingIndexOfCycle(cycle));
 
         
 
