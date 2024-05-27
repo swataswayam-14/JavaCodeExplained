@@ -149,7 +149,7 @@ public class LL {
     public int getSize(){
         return this.size;
     }
-
+//QUESTIONS
     //insertion using recursion
     public void RecInsert(int val , int index){
         head = insertRec(val, index, head);
@@ -163,6 +163,38 @@ public class LL {
         }
         node.next = insertRec(val, index--, node.next);
         return node;
+    }
+//remove duplicates in a sorted linked list: 
+    public void RemoveDuplicates(){
+        if(size <= 1){
+            return;
+        }
+        Node temp1 = head;
+        Node temp2 = head;
+        
+        while(temp1!=null && temp2!=null){
+            if(temp2.val == temp1.val){
+                temp1 = temp1.next;
+                size -= 1;
+            }else{
+                temp2.next = temp1;
+                temp2 = temp1;
+            }
+        }
+    }
+    public void RemoveDuplicates2(){
+        Node node = head;
+
+        while(node.next!=null){
+            if(node.val == node.next.val){
+                node.next = node.next.next;
+                size--;
+            }else{
+                node = node.next;
+            }
+        }
+        tail = node;
+        tail.next = null;
     }
     
     private class Node{
