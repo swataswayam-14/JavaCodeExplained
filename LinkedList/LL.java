@@ -250,6 +250,34 @@ public class LL {
         return false;
 
     }
+    public static int findLengthOfCycle(LL list){
+        if(list.getSize() <= 1){
+            return 0;
+        }
+        int len = 0;
+        Node fast = list.head;
+        Node slow = list.head;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(fast == null || fast.next == null){
+                return 0;
+            }
+            if(fast == slow){
+                break;
+            }
+        }
+        do {
+            len++;
+            slow = slow.next;
+        } while (slow!=fast);
+
+        return len;
+       
+
+    }
     public static void createCycle(LL list){
         if(list.getSize() <= 1){
             return;
