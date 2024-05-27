@@ -316,6 +316,23 @@ public class LL {
 
     }
 
+    public static int middleOfLinkedList(LL list){
+        if(list.head == null){
+            return Integer.MIN_VALUE;
+        }
+        if(list.getSize() <= 1){
+            return list.head.val;
+        }
+        Node fast = list.head;
+        Node slow = list.head;
+
+        while(fast!=null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.val;
+    }
+
 
     
     private class Node{

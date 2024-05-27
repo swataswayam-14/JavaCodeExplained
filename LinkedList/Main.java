@@ -5,6 +5,7 @@ import static LinkedList.LL.detectCycle;
 import static LinkedList.LL.findLengthOfCycle;
 import static LinkedList.LL.findStartingIndexOfCycle;
 import static LinkedList.LL.merge;
+import static LinkedList.LL.middleOfLinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -121,19 +122,21 @@ public class Main {
         // // ll.display();
 
         LL cycle = new LL();
-        cycle.insertLast(12);
-        cycle.insertLast(13);
-        cycle.insertLast(14);
-        cycle.insertLast(15);
-        cycle.insertLast(12);
-        cycle.insertLast(13);
-        cycle.insertLast(14);
-        cycle.insertLast(15);
+        // cycle.insertLast(12);
+        // cycle.insertLast(13);
+        // cycle.insertLast(14);
+        // cycle.insertLast(15);
+        // cycle.insertLast(12);
+        // cycle.insertLast(13);
+        // cycle.insertLast(14);
+        // cycle.insertLast(15);
+
+        System.out.println(middleOfLinkedList(cycle));
 
         //createCycle(cycle);
-        System.out.println(detectCycle(cycle));
-        System.out.println(findLengthOfCycle(cycle));
-        System.out.println(findStartingIndexOfCycle(cycle));
+        // System.out.println(detectCycle(cycle));
+        // System.out.println(findLengthOfCycle(cycle));
+        // System.out.println(findStartingIndexOfCycle(cycle));
 
         
 
