@@ -2,7 +2,10 @@ package LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        // LL l = new LL();
+        LL l = new LL();
+        l.RecInsert(131, 0);
+        l.RecInsert(14312, 1);
+        l.display();
 
         // l.insertFirst(12);
         // l.insertFirst(23);
@@ -66,19 +69,19 @@ public class Main {
 
         // l.display();
 
-        CLL cl = new CLL();
-        cl.insert(1);
-        cl.insert(2);
-        cl.insert(3);
-        cl.insert(5);
-        cl.display();
-        try {
-            System.out.println(cl.deleteLast());
-            cl.delete(1);
-            cl.display();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        // CLL cl = new CLL();
+        // cl.insert(1);
+        // cl.insert(2);
+        // cl.insert(3);
+        // cl.insert(5);
+        // cl.display();
+        // try {
+        //     System.out.println(cl.deleteLast());
+        //     cl.delete(1);
+        //     cl.display();
+        // } catch (Exception e) {
+        //     System.out.println(e.getMessage());
+        // }
         
 
       
