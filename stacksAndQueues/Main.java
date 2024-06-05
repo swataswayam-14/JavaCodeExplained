@@ -123,6 +123,24 @@ public class Main {
         }
 
 
+        System.out.println("===================Circular queue implementation===============");
+
+        CircularQueue queue3 = new CircularQueue();
+        queue3.insert(12);
+        queue3.insert(13);
+        queue3.insert(14);
+        queue3.insert(15);
+        queue3.insert(16);
+
+        queue3.display();
+        try {
+            System.out.println(queue3.remove());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        queue3.insert(121121);
+        queue3.display();
+
 
     }
 }
