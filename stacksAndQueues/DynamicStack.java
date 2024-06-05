@@ -18,4 +18,7 @@ public class DynamicStack extends CustomStack {
         }
         return super.push(item);
     }
+    public int pop() throws StackException{
+        return super.pop();
+    }
 }

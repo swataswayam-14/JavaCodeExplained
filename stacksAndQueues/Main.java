@@ -86,6 +86,43 @@ public class Main {
         stack3.push(123);
         stack3.push(1743);
 
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+        System.out.println(stack3.pop());
+
+        System.out.println("===================Custom queue implementation===============");
+        CustomQueue queue2 = new CustomQueue();
+        queue2.insert(1);
+        queue2.insert(2);
+        queue2.insert(3);
+        queue2.insert(4);
+        queue2.insert(5);
+
+        queue2.display();
+        try {
+            System.out.println(queue2.remove());
+            System.out.println(queue2.remove());
+            System.out.println(queue2.remove());
+            System.out.println(queue2.remove());
+            System.out.println(queue2.remove());   
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+
 
     }
 }
