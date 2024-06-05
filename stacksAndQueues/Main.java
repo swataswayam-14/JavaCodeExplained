@@ -67,6 +67,25 @@ public class Main {
         System.out.println(stack2.pop());
         System.out.println(stack2.pop());
 
+        System.out.println("===============Dynamic stack implementation===================");
+        DynamicStack stack3 = new DynamicStack();
+        stack3.push(17);
+        stack3.push(16);
+        stack3.push(15);
+        stack3.push(12);
+        stack3.push(123);
+        stack3.push(16);
+        stack3.push(17);
+        stack3.push(17);
+        stack3.push(12);
+        stack3.push(17);
+        stack3.push(19);
+        stack3.push(12);
+        stack3.push(13);
+        stack3.push(18);
+        stack3.push(123);
+        stack3.push(1743);
+
 
     }
 }

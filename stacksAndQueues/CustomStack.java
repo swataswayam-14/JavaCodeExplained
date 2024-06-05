@@ -35,7 +35,7 @@ public class CustomStack {
     }
 
 
-    private boolean isFull(){
+    public boolean isFull(){
         return ptr == data.length-1;
     }
     private boolean isEmpty(){
