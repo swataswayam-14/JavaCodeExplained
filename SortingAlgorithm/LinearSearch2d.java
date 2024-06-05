@@ -100,7 +100,7 @@ public class LinearSearch2d {
             if(matrix[row][mid] == target){
                 return new int[]{row, mid};
             }else if(matrix[row][mid] < target){
-                cStart = mid+1;
+                cStart = mid+1; 
             }else{
                 cEnd = mid-1;
             }
