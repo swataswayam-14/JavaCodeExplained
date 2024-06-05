@@ -141,6 +141,29 @@ public class Main {
         queue3.insert(121121);
         queue3.display();
 
+        System.out.println("==============Queue using stacks================(Google interview)");
+
+        QueueUsingStacks queueStack = new QueueUsingStacks();
+        queueStack.insert(1);
+        queueStack.insert(2);
+        queueStack.insert(3);
+        queueStack.insert(4);
+        queueStack.insert(5);
+
+        try {
+            int firstItem = queueStack.peek();
+            System.out.println("The first item is "+firstItem);
+
+            System.out.println("======Removing all the elements from the queue=====");
+
+            System.out.println(queueStack.remove());
+            System.out.println(queueStack.remove());
+            System.out.println(queueStack.remove());
+            System.out.println(queueStack.remove());
+            System.out.println(queueStack.remove());
+        } catch (Exception e) {
+            System.out.println(e);
+        }
 
     }
 }
