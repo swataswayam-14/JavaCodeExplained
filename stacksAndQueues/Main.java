@@ -8,7 +8,7 @@ import java.util.Stack;
 
 public class Main {
     //inbuilt examples
-    public static void main(String[] args) {
+    public static void main(String[] args) throws StackException {
         Stack<Integer> stack = new Stack<>(); //Stack is a class
         stack.push(1);
         stack.push(2);
@@ -54,6 +54,19 @@ public class Main {
         deque.addFirst(1);
         deque.add(12);
         deque.addFirst(123);
+
+        System.out.println("===========Custom stack implementation=================");
+        CustomStack stack2 = new CustomStack();
+        stack2.push(32);
+        stack2.push(36);
+        stack2.push(37);
+        stack2.push(38);
+
+        System.out.println(stack2.pop());
+        System.out.println(stack2.pop());
+        System.out.println(stack2.pop());
+        System.out.println(stack2.pop());
+
 
     }
 }
